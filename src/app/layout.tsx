@@ -51,7 +51,7 @@ export default function RootLayout({
           attribute="class"
           defaultTheme="system" // 'system' | 'light' | 'dark'
           enableSystem
-          disableTransitionOnChange // Smooth switching
+          disableTransitionOnChange
         >
           {/* All pages and layouts will render inside this provider */}
           {children}
