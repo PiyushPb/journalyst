@@ -6,7 +6,6 @@
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
-  font-size: 1em;
 }
 
 @custom-variant dark (&:is(.dark *));
@@ -125,4 +124,27 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.sidebar-active {
+  position: relative;
+  border-radius: 15px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 51, 54, 0.196) 0%,
+    rgba(119, 103, 255, 0.148) 100%
+  );
+}
+
+.sidebar-active::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 15px;
+  padding: 2px;
+  background: linear-gradient(180deg, #ff3336 0%, #6c569d 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
 }
