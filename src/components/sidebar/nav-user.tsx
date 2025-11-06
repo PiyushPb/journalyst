@@ -44,13 +44,13 @@ export function NavUser({
           <DropdownMenuTrigger asChild>
             <SidebarMenuButton
               size="lg"
-              className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
+              className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground p-0!"
             >
               <Avatar className="h-[40px] w-[40px] rounded-full">
                 <AvatarImage src={user.avatar} alt={user.name} />
                 <AvatarFallback className="rounded-lg">CN</AvatarFallback>
               </Avatar>
-              <div className="grid flex-1 text-left ml-[8px]">
+              <div className="grid flex-1 text-left">
                 <span className="truncate text-[16px] font-medium leading-[120%]">
                   {user.name}
                 </span>

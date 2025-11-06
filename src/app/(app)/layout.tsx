@@ -1,9 +1,6 @@
+import DashboardHeader from "@/components/layout/dashboard/DashboardHeader";
 import { AppSidebar } from "@/components/sidebar/app-sidebar";
-import {
-  SidebarInset,
-  SidebarProvider,
-  SidebarTrigger,
-} from "@/components/ui/sidebar";
+import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 
 export default function RootLayout({
   children,
@@ -14,7 +11,10 @@ export default function RootLayout({
     <SidebarProvider>
       <AppSidebar />
       <SidebarInset>
-        <div className="flex flex-1 flex-col gap-4 p-4">{children}</div>
+        <main className="flex flex-1 flex-col gap-4 p-[30px]">
+          <DashboardHeader />
+          <section className="mt-[20px]">{children}</section>
+        </main>
       </SidebarInset>
     </SidebarProvider>
   );

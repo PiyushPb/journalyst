@@ -29,13 +29,14 @@ function MainNav({ items }: { items: NavItem[] }) {
                 asChild
                 isActive={isActive}
                 className={cn(
-                  "transition-all duration-200",
-                  isActive && "sidebar-active"
+                  "transition-all duration-200 ease-in-out hover:bg-sidebar-accent hover:text-sidebar-accent-foreground",
+                  isActive && "sidebar-active",
+                  isActive ? "" : "text-gray-400 hover:text-gray-600"
                 )}
               >
                 <Link href={item.path}>
                   <item.icon />
-                  <span>{item.label}</span>
+                  <span className="text-[16px]">{item.label}</span>
                 </Link>
               </SidebarMenuButton>
             </SidebarMenuItem>

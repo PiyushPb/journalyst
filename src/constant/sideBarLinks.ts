@@ -22,6 +22,8 @@ const mainNavItems: NavItem[] = [
     label: "Dashboard",
     path: "/dashboard",
     icon: LayoutDashboard,
+    title: "Dashboard",
+    description : "Good morning! Piyush",
   },
   {
     id: "nav_journal",
