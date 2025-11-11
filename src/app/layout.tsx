@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
-  display: "swap",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 // Default SEO metadata (you can override per page)
@@ -51,7 +51,7 @@ export default function RootLayout({
           attribute="class"
           defaultTheme="system" // 'system' | 'light' | 'dark'
           enableSystem
-          disableTransitionOnChange // Smooth switching
+          disableTransitionOnChange
         >
           {/* All pages and layouts will render inside this provider */}
           {children}
