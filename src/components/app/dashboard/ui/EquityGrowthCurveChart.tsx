@@ -48,7 +48,7 @@ const chartConfig = {
 function EquityGrowthCurveChart() {
   return (
     <div className="card w-full flex flex-col gap-5">
-      <div>
+      <div className="mb-5">
         <h3>Equity Growth Curve</h3>
       </div>
       <div>
