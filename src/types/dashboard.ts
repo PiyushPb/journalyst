@@ -16,3 +16,11 @@ export interface StatCard {
   badge?: StatBadge;
   progress?: StatProgress;
 }
+
+export type RecentTradeTable = {
+  id: number;
+  closeDate: string;
+  symbol: string;
+  side: "Buy" | "Sell";
+  netPnl: number;
+};
