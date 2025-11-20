@@ -6,9 +6,8 @@ import { Plus, MoreVertical } from "lucide-react";
 
 export default function DailyPlanner() {
   return (
-    <div className="flex flex-col gap-8 w-full px-10 lg:px-14">
+    <div className="flex flex-col gap-8 w-full">
       <div className="flex flex-col w-full">
-        <div className="w-full border-t border-[#2A2A2A]/80 mb-2"></div>
 
         <div className="flex items-center justify-between">
           <h2 className="text-[18px] font-medium tracking-tight text-[#C1C1C1]">

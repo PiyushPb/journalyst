@@ -3,9 +3,9 @@ import DailyPlanner from "@/components/app/edge/components/DailyPlanner";
 
 function page() {
   return (
-    <main className="flex flex-col gap-5 p-6 edge">
+    <section className="flex flex-col gap-5 w-full">
       <DailyPlanner />
-    </main>
+    </section>
   );
 }
 
