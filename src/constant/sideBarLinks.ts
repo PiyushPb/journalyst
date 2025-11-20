@@ -14,6 +14,8 @@ interface NavItem {
   label: string;
   path: string;
   icon: LucideIcon;
+  title?: string;
+  description?: string;
 }
 
 const mainNavItems: NavItem[] = [
