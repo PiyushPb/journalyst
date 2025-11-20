@@ -6,7 +6,9 @@ import { Plus, MoreVertical } from "lucide-react";
 
 export default function DailyPlanner() {
   return (
-    <div className="flex flex-col gap-8 w-full px-10 lg:px-14">
+    <div className="flex flex-col gap-10 w-full px-10 lg:px-14">
+      
+      {/* Header */}
       <div className="flex flex-col w-full">
         <div className="w-full border-t border-[#2A2A2A]/80 mb-2"></div>
 
@@ -22,6 +24,7 @@ export default function DailyPlanner() {
             >
               <Plus size={18} strokeWidth={1.6} />
             </button>
+
             <button
               className="hover:text-white transition-colors"
               title="More options"
@@ -32,11 +35,12 @@ export default function DailyPlanner() {
         </div>
       </div>
 
-
-
-      {plannerSections.map((section) => (
-        <MarketCard key={section.id} {...section} />
-      ))}
+      {/* Cards */}
+      <div className="flex flex-col gap-12 w-full">
+        {plannerSections.map((section) => (
+          <MarketCard key={section.id} {...section} />
+        ))}
+      </div>
     </div>
   );
 }

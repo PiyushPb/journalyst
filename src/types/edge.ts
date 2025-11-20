@@ -11,7 +11,7 @@ export interface PlannerSection {
   id: number;
   title: string;
   content: string;
-  chart?: boolean;
+  chart?: string;
   tradeData?: TradeData;
   labels?: string[];
 }

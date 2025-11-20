@@ -6,7 +6,8 @@ export const plannerSections: PlannerSection[] = [
     title: "Pre - Market Plan",
     content:
       "TSLA holding support near 188, strong pre-market momentum. Watching for breakout above 190.50 with volume confirmation. Potential scalp toward 193. Need to avoid early entries before confirmation above VWAP.",
-    chart: true,
+      chart: "/assets/edge/chart1.png",
+   
     tradeData: {
       ticker: "TESLA",
       direction: "Buy",
@@ -15,7 +16,7 @@ export const plannerSections: PlannerSection[] = [
       takeProfit: "356.06",
       quantity: "50",
     },
-    chart: "/assets/edge/chart1.png",
+    
   },
   {
     id: 2,
@@ -31,7 +32,7 @@ export const plannerSections: PlannerSection[] = [
       `Executed plan as intended. Waited for confirmation above VWAP, scaled out as price approached resistance. Could’ve entered with more size, but happy with patience and clean exit. 
       
       Felt slight anxiety before entry but managed emotions well. No FOMO. Gained confidence from sticking to strategy.`,
-    chart: true,
+
     chart: "/assets/edge/chart1.png",
   },
 
