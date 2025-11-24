@@ -41,14 +41,16 @@ const ProgressRing = ({
   value = 1.8,
   min = 0,
   max = 2,
+  color = "#16A34A", // default = green
 }: {
   value?: number;
   min?: number;
   max?: number;
+  color?: string;
 }) => {
   const clamped = Math.min(Math.max(value, min), max);
   const percentage = ((clamped - min) / (max - min)) * 100;
-  const safePercentage = Math.min(percentage, 99.999); // prevent visual wrap
+  const safePercentage = Math.min(percentage, 99.999);
 
   const radius = 40;
   const strokeWidth = 8;
@@ -67,11 +69,13 @@ const ProgressRing = ({
           strokeWidth={strokeWidth}
           fill="none"
         />
+
+        {/* DYNAMIC COLOR */}
         <circle
           cx="45"
           cy="45"
           r={radius}
-          stroke="#16A34A"
+          stroke={color}
           strokeWidth={strokeWidth}
           fill="none"
           strokeLinecap="round"
@@ -80,8 +84,10 @@ const ProgressRing = ({
           className="transition-all duration-500 ease-in-out"
         />
       </svg>
+
+      {/* CENTER VALUE */}
       <div className="absolute inset-0 flex items-center justify-center text-xl font-semibold">
-        {value.toFixed(1)}
+        {value}%
       </div>
     </div>
   );
