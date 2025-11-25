@@ -13,12 +13,16 @@ function RecentTradeTable() {
             <th className="py-2 pr-2 font-medium text-right">Net P&amp;L</th>
           </tr>
         </thead>
-        <tr className="h-[20px]"></tr>
+
+        {/* Spacer row must go INSIDE tbody */}
         <tbody className="text-gray-100">
+          <tr className="h-[20px]"></tr>
+
           {recentTrades.map((trade, idx) => (
             <tr key={idx} className="border-t border-gray-800">
               <td className="py-2">{trade.closeDate}</td>
               <td className="py-2">{trade.symbol}</td>
+
               <td
                 className={`py-2 ${
                   trade.side === "Buy" ? "text-green-400" : "text-red-400"
@@ -26,6 +30,7 @@ function RecentTradeTable() {
               >
                 {trade.side === "Buy" ? "▲ Buy" : "▼ Sell"}
               </td>
+
               <td
                 className={`py-2 text-right ${
                   trade.netPnl > 0 ? "text-green-400" : "text-red-400"
