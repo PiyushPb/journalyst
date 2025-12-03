@@ -30,7 +30,7 @@ export default function MarketCard({
   return (
     <div
       className="
-        card w-[92%] mx-auto
+        card w-full mx-auto
         flex flex-col lg:flex-row
         justify-between
         gap-8 lg:gap-12
