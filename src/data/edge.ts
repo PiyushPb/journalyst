@@ -22,7 +22,8 @@ export const plannerSections: PlannerSection[] = [
     id: 2,
     title: "In - Market Notes",
     content:
-      "TSLA broke above VWAP with strong volume around 10:10 AM. Waited for a clean retest and entered on strength. The price moved steadily toward the target. Used a trailing stop which secured partial profits before the final resistance zone hit.",
+      `TSLA broke above VWAP with strong volume around 10:10 AM. Waited for a clean retest and entered on strength. The price moved steadily toward the target. 
+      Used a trailing stop which secured partial profits before the final resistance zone hit.`,
     labels: ["Disciplined", "Relief", "Focused", "ExecutionConfidence", "SlightAnxiety"],
   },
   {
