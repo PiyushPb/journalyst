@@ -154,22 +154,23 @@
 :root {
     /* === EDGE LABEL COLORS === */
     /* Emotion / Behavior labels */
-    --label-disciplined-bg: #422b3e;
-    --label-disciplined-text: #f37fc2;
-    --label-relief-bg: #1e2d5e;
-    --label-relief-text: #7aa2ff;
-    --label-focused-bg: #4a3200;
-    --label-focused-text: #ffb84c;
-    --label-execution-bg: #4a3a00;
+    --label-disciplined-bg: #FE60B133;
+    --label-disciplined-text: #FE60B1;
+    --label-relief-bg: #725EFC33;
+    --label-relief-text: #725EFC;
+    --label-focused-bg: #B7630B33;
+    --label-focused-text: #B76C0B;
+    --label-execution-bg: #F4B50733;
     --label-execution-text: #ffd447;
     --label-anxiety-bg: #213b1d;
     --label-anxiety-text: #7ae27a;
     /* Trade direction */
-    --label-buy-bg: #163c26;
+    --label-buy-bg: #49DE8033;
     --label-buy-text: #49de80;
     --label-sell-bg: #3a1e1e;
-    --label-sell-text: #ff6b6b;
+    --label-sell-text: #FF6B6B;
 }
+
 :root {
-  --label-heading-color: #9b9b9b;
+    --label-heading-color: #9b9b9b;
 }
