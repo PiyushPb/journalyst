@@ -8,7 +8,6 @@ import {
   AlertTriangle,
   ArrowUp,
 } from "lucide-react";
-
 import SetupTag from "./SetupTag";
 
 export default function SetupCard({
@@ -17,41 +16,46 @@ export default function SetupCard({
   reward,
   sampleSize,
   tags,
-  highlight,
   icons,
 }) {
   // ---- Dynamic Win Rate Color ----
   const winRateValue = Number(winRate.replace("%", ""));
   const winColor =
     winRateValue >= 65
-      ? "text-[#63FF84]" // Green
+      ? "text-[#63FF84]"
       : winRateValue >= 55
-      ? "text-[#FFD966]" // Yellow
-      : "text-[#FF6B6B]"; // Red
+      ? "text-[#FFD966]"
+      : "text-[#FF6B6B]";
 
   // ---- Dynamic Risk Reward Color ----
   const rewardNum = parseFloat(reward);
   const rrColor =
     rewardNum >= 2
-      ? "text-[#63FF84]" // Green
+      ? "text-[#63FF84]"
       : rewardNum >= 1
-      ? "text-[#FFD966]" // Yellow
-      : "text-[#FF6B6B]"; // Red
+      ? "text-[#FFD966]"
+      : "text-[#FF6B6B]";
 
   return (
     <div
-      className={`
-        w-full bg-gradient-to-b from-[#0F0F0F] to-[#161616]
-        border border-[#2C2C2C]
-        rounded-3xl p-6 flex flex-col gap-6
+      className="
+        w-full
+        bg-gradient-to-b from-[#0F0F0F] to-[#161616]
+        border border-[#2A2A2A]
+        rounded-[20px]
+        p-[24px]
+        flex flex-col
+        gap-4
         transition-all duration-300
-        hover:border-[#3B3B3B] hover:-translate-y-[2px]
-        
-      `}
+        hover:border-[#3A3A3A]
+        hover:-translate-y-[2px]
+      "
     >
-      {/* Title + Icons */}
+      {/* TITLE + ICONS */}
       <div className="flex justify-between items-start">
-        <h3 className="text-[20px] font-semibold text-white">{title}</h3>
+        <h3 className="text-[20px] font-semibold leading-none text-white">
+          {title}
+        </h3>
 
         <div className="flex items-center gap-3 text-[#9A9A9A]">
           {icons?.fire && <Flame size={18} color="#49DE80" />}
@@ -63,27 +67,37 @@ export default function SetupCard({
         </div>
       </div>
 
-      {/* Tags */}
-      <div className="flex flex-wrap gap-2">
+      {/* TAGS */}
+      <div className="flex flex-wrap gap-[8px]">
         {tags.map((t, i) => (
           <SetupTag key={i} label={t} />
         ))}
       </div>
 
-      {/* Stats */}
-      <div className="flex flex-col gap-3 text-[15px] text-[#CFCFCF]">
-        <div>
-          Win Rate: <span className={`font-semibold ${winColor}`}>{winRate}</span>
+      {/* STATS */}
+      <div className="flex flex-col gap-3 text-[16px] text-[#CFCFCF]">
+        {/* Win Rate */}
+        <div className="flex items-center gap-2">
+          <span>Win Rate:</span>
+          <span className={`font-bold text-[24px] leading-[120%] ${winColor}`}>
+            {winRate}
+          </span>
         </div>
 
-        <div>
-          Risk Reward:{" "}
-          <span className={`font-semibold ${rrColor}`}>{reward}</span>
+        {/* Risk Reward */}
+        <div className="flex items-center gap-2">
+          <span>Risk Reward:</span>
+          <span className={`font-bold text-[24px] leading-[120%] ${rrColor}`}>
+            {reward}
+          </span>
         </div>
 
-        <div>
-          Sample Size:{" "}
-          <span className="text-white font-semibold">{sampleSize} Trades</span>
+        {/* Sample Size */}
+        <div className="flex items-center gap-2">
+          <span>Sample Size:</span>
+          <span className="text-white font-semibold text-[20px] leading-[120%]">
+            {sampleSize} Trades
+          </span>
         </div>
       </div>
     </div>
