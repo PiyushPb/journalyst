@@ -174,3 +174,41 @@
 :root {
     --label-heading-color: #9b9b9b;
 }
+
+:root {
+    /* === SETUP TAG COLORS === */
+    --setup-forex-bg: #1488FC33;
+    --setup-forex-text: #1488FC;
+    --setup-crypto-bg: #B76B0D33;
+    --setup-crypto-text: #B76B0D;
+    --setup-options-bg: #FE60B133;
+    --setup-options-text: #FE60B1;
+    --setup-high-bg: #49DE8033;
+    --setup-high-text: #49DE80;
+    --setup-moderate-bg: #FACC1433;
+    --setup-moderate-text: #FACC14;
+    --setup-low-bg: #FF6B6B33;
+    --setup-low-text: #FF6B6B;
+}
+
+:root {
+    /* ===== GOAL TAG COLORS ===== */
+    --goal-finance-bg: #725EF333;
+    --goal-finance-text: #725EF3;
+    --goal-personal-bg: #1488FC33;
+    --goal-personal-text: #1488FC;
+    --goal-shortterm-bg: #E5820033;
+    --goal-shortterm-text: #F4B507CC;
+    --goal-saving-bg: #1488FC33;
+    --goal-saving-text: #1488FC;
+    --goal-security-bg: #553C0A;
+    --goal-security-text: #F4B507CC;
+    --goal-health-bg: #1488FC33;
+    --goal-health-text: #1488FC;
+    --goal-learning-bg: #1488FC33;
+    --goal-learning-text: #1488FC;
+    --goal-skills-bg: #E5820033;
+    --goal-skills-text: #F4B507CC;
+    --goal-fitness-bg: #725EF333;
+    --goal-fitness-text: #725EF3;
+}

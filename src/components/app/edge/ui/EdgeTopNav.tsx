@@ -14,7 +14,8 @@ export default function EdgeTopNav() {
   return (
     <div className="w-full">
       {/* NAV TABS */}
-      <div className="flex items-center gap-8 px-10 pt-5">
+      <div className="flex items-center gap-8 px-10 pt-0">
+
         {tabs.map((tab) => {
           const active = pathname === tab.href;
 
